@@ -1,0 +1,22 @@
+.slider {
+  width: 100vw;
+}
+
+.swiper-container .swiper-pagination {
+
+  @media (min-width: $tablet-width-min) {
+
+  };
+
+  @media (min-width: $desktop-width-min) {
+    bottom: 37px;
+  }
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: $special-blue-persian;
+  opacity: 1;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: $base-blue;
+}

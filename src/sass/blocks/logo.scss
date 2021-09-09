@@ -1,0 +1,18 @@
+.logo {
+  padding: 5px 10px 10px 0;
+  width: 116px;
+  height: 19px;
+  background-image: url("../../img/logo-m.svg");
+
+  @media (min-width: $tablet-width-min)  {
+    width: 134px;
+    height: 24px;
+    background-image: url("../../img/logo-t.svg");
+  }
+
+  @media (min-width: $desktop-width-min) {
+    width: 150px;
+    height: 27px;
+    background-image: url("../../img/logo-d.svg");
+  }
+}

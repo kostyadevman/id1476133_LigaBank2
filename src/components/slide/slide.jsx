@@ -67,7 +67,6 @@ const Slide = ({data}) => {
             alt={`slide ${data.id}`}
           />
         </picture>
-
       </div>
     </div>
   );
@@ -79,7 +78,7 @@ Slide.propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subTitle: PropTypes.string.isRequired,
-    buttonText: PropTypes.string.isRequired,
+    buttonText: PropTypes.string,
     isDark: PropTypes.bool.isRequired
   })
 }

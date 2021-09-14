@@ -8,16 +8,18 @@ html {
   height: 100%;
 }
 
-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+.body {
   align-content: start;
   font-family: $base-f;
   font-size: 16px;
   line-height: 19px;
   color: $base-black;
   background-color: $base-white;
+}
+root {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 input[type="number"] {
@@ -69,8 +71,24 @@ img {
     padding-left: 98px;
     padding-right: 98px;
   }
-
 }
+
+.container--services {
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: $tablet-width-min)  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    padding-left: 98px;
+    padding-right: 98px;
+  }
+}
+
+
 
 .button {
   width: 188px;

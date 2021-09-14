@@ -1,0 +1,85 @@
+.services {
+
+
+  @media (min-width: $tablet-width-min) {
+
+  }
+
+  @media (min-width: $desktop-width-min) {
+    margin-top: 60px;
+  }
+}
+
+.tabs__tab-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs__tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 93px;
+  text-align: center;
+  font-size: 18px;
+  font-family: $base-medium-f;
+  line-height: 21px;
+  cursor: pointer;
+  color: $special-abbey;
+
+  &--selected {
+    color: $base-black;
+    background-color: $base-blue;
+  }
+}
+
+.tabs__tab:hover,
+.tabs__tab:focus {
+  opacity: 0.7;
+}
+
+.tabs__tab-panel {
+  &--selected {
+    background-color: $base-blue;
+  }
+}
+
+.tabs__name {
+  position: relative;
+  font-size: 18px;
+  padding: 0 0 0 41px;
+}
+
+@mixin tabs-icon($service-name) {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  background-repeat: no-repeat;
+  background-image: url('/img/#{$service-name}-icon.svg');
+}
+.tabs__name {
+
+  &--deposit:before {
+    @include tabs-icon("deposit");
+  };
+
+  &--credits:before {
+    @include tabs-icon("credits");
+  };
+
+  &--insurance:before {
+    @include tabs-icon("insurance");
+  }
+
+  &--online:before {
+    @include tabs-icon("online");
+    left: 5px;
+  }
+}

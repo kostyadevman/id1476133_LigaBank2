@@ -8,6 +8,9 @@ export const prettify = (out) => {
   return Math.round( ( out + Number.EPSILON ) * 10000 ) / 10000
 }
 
+export const getId = () => {
+  return Math.random().toString(36);
+}
 
 export const MENU_SETTINGS = {
   header: {

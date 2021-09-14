@@ -50,16 +50,16 @@
 }
 .slide__wrapper {
   position: absolute;
-  top: 52px;
+  top: 35px;
   left: 15px;
 
   @media (min-width: $tablet-width-min) {
-    top: 80px;
-    left: 88px;
+    top: 56px;
+    left: 85px;
   };
 
   @media (min-width: $desktop-width-min) {
-    top: 121px;
+    top: 93px;
     left: 267px;
   }
 }
@@ -82,7 +82,7 @@
 .slide__subtitle {
   width: 140px;
   margin: 0;
-  padding: 21px 0 0 0;
+  padding: 0;
   font-family: $base-f;
   font-size: 16px;
 
@@ -90,13 +90,13 @@
   @media (min-width: $tablet-width-min) {
     width: 388px;
     font-size: 18px;
-    padding: 26px 0 0 0;
+    padding: 0;
   };
 
   @media (min-width: $desktop-width-min) {
     width: 388px;
     font-size: 22px;
-    padding: 35px 0 0 0;
+    padding: 0;
   }
 }
 
@@ -107,13 +107,13 @@
 }
 
 .slide__button {
-  margin: 30px 0 0 0;
+  margin: 25px 0 0 0;
 
   @media (min-width: $tablet-width-min) {
-    margin: 30px 0 0 0;
+    margin: 26px 0 0 0;
   };
 
   @media (min-width: $desktop-width-min) {
-    margin: 39px 0 0 0;
+    margin: 31px 0 0 0;
   }
 }

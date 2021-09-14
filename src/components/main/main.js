@@ -1,12 +1,12 @@
 import React from 'react';
-// import Promo from '../promo/promo';
-// import Converter from '../converter/converter';
 import Slider from "../slider/slider";
+import Services from "../services/services";
 
 const Main = () => {
   return (
     <main>
       <Slider/>
+      <Services/>
     </main>
   );
 };

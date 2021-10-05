@@ -1,0 +1,7 @@
+.step-three {
+  background-color: $base-black;
+  @media (min-width: $desktop-width-min) {
+    max-width: 770px;
+
+  }
+}

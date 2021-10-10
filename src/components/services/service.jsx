@@ -52,6 +52,8 @@ const Service = ({service}) => {
         />
         <img
           className="service__img"
+          width="289"
+          height="260"
           src={`${process.env.PUBLIC_URL}/images/services/tab${service.id}_phone.jpg`}
           srcSet={`${process.env.PUBLIC_URL}/images/services/tab${service.id}_phone@2x.jpg 2x`}
           alt={`slide ${service.id}`}

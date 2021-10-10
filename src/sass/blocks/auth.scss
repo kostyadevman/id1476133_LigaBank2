@@ -33,6 +33,7 @@
   height: 20px;
   border: none;
   background: transparent url("../../img/menu-close.svg") no-repeat;
+  cursor: pointer;
 
   @media (min-width: $tablet-width-min) {
     top: 52px;
@@ -43,6 +44,11 @@
   @media (min-width: $desktop-width-min) {
     right: 52px;
   }
+}
+
+.auth__close:hover,
+.auth__close:focus {
+  opacity: 0.7;
 }
 
 .auth__logo {

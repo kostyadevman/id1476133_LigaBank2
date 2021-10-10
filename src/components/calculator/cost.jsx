@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
-import numeralize from "numeralize-ru";
-import {Mortgage} from "../../const";
-import {decreaseValue, increaseValue, isValueInRange} from "../../utils";
-import classNames from "classnames";
 import {useDispatch, useSelector} from "react-redux";
+import classNames from "classnames";
+import numeralize from "numeralize-ru";
+import {decreaseValue, increaseValue, isValueInRange} from "../../utils";
 import {setCost, setIsCostError} from "../../store/action";
+import {Mortgage} from "../../const";
 
 const Cost = () => {
 
@@ -35,7 +35,6 @@ const Cost = () => {
   const _handleCostFocus = (evt) => {
     evt.preventDefault();
     setIsFocus(true);
-    dispatch(setIsCostError(false))
   }
 
   useEffect(() => {
@@ -64,7 +63,7 @@ const Cost = () => {
     return classNames (
   'step-second__fieldset',
       'cost',
-      {'cost--error': isCostError}
+      {'cost--error': isCostError && !isFocus}
     )
 
 
@@ -87,7 +86,7 @@ const Cost = () => {
         />
         <span className="cost__hint">{`От ${Mortgage[selectedOption].MIN.toLocaleString()} до ${Mortgage[selectedOption].MAX.toLocaleString()} рублей`}</span>
         <div className="cost__plus" onClick={_handlePlusClick}/>
-        <div className="cost__minus" onClick={_handleMinusClick} />
+        <div className="cost__minus"  onClick={_handleMinusClick} />
       </div>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
 import Media from "react-media";
-import {mediaQueries} from "../../media";
+import classNames from "classnames";
 import {Tabs, TabList, TabPanel, Tab} from "react-tabs";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {mediaQueries} from "../../media";
 import 'react-tabs/style/react-tabs.css';
 import Service from "./service";
-import classNames from "classnames";
-import {Swiper, SwiperSlide} from "swiper/react";
 import {getId} from "../../utils";
 import {SLIDER_DELAY} from "../../const";
 

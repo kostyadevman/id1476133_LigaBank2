@@ -1,10 +1,10 @@
 import React from "react";
-
 import SwiperCore, {Autoplay, Pagination} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
-import {SLIDER_DELAY, Slides} from "../../const";
+import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
 import Slide from "../slide/slide";
+import {SLIDER_DELAY, Slides} from "../../const";
 
 SwiperCore.use([Autoplay, Pagination]);
 

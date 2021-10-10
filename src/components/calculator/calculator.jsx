@@ -1,13 +1,13 @@
 import React from "react";
+import {useDispatch, useSelector} from "react-redux";
 import StepFirst from "./step-first";
 import StepSecond from "./step-second";
 import Offer from "./offer";
-import {useDispatch, useSelector} from "react-redux";
-import {SelectOption} from "../../const";
 import StepThree from "./step-three";
 import Modal from "../modal/modal";
-import {setThankYouOpen} from "../../store/action";
 import ThankYou from "./thank-you";
+import {setThankYouOpen} from "../../store/action";
+import {SelectOption} from "../../const";
 
 
 const Calculator = () => {

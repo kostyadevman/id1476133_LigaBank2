@@ -1,12 +1,12 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import classNames from "classnames";
-import {LogoType, MenuType} from '../../../const';
 import Menu from '../../menu/menu';
 import Logo from '../../logo/logo';
-import {setAuthOpen, setMenuOpen} from "../../../store/action";
 import Modal from "../../modal/modal";
 import Auth from "../../auth/auth";
+import {setAuthOpen, setMenuOpen} from "../../../store/action";
+import {LogoType, MenuType} from '../../../const';
 
 const Header = () => {
 

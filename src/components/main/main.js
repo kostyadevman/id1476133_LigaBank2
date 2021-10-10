@@ -6,7 +6,8 @@ import Map from "../map/map";
 
 const Main = () => {
   return (
-    <main>
+    <main className="main">
+      <h1 className="main__title visually-hidden">Лига банк</h1>
       <Slider />
       <Services />
       <Calculator />

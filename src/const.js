@@ -25,9 +25,31 @@ export const MenuType = {
 export const SLIDER_DELAY = 4000;
 
 export const Slides = [
-  {id: 1, name: 'calculator', title: 'Лига Банк', subTitle: 'Кредиты&nbsp;на&nbsp;любой&nbsp;случай', buttonText: 'Рассчитать кредит', isDark: true},
-  {id: 2, name: 'promo', title: 'Лига Банк', subTitle: 'Ваша уверенность в\u00A0завтрашнем дне', isDark: false},
-  {id: 3, name: 'department', title: 'Лига Банк', subTitle: 'Всегда рядом', buttonText: 'Найти отделение', isDark: false}
+  {
+    id: 1,
+    name: 'calculator',
+    title: 'Лига Банк',
+    subTitle: 'Кредиты на любой случай',
+    buttonText: 'Рассчитать кредит',
+    isDark: true,
+    link: 'calculator'
+  },
+  {
+    id: 2,
+    name: 'promo',
+    title: 'Лига Банк',
+    subTitle: 'Ваша уверенность в\u00A0завтрашнем дне',
+    isDark: false
+  },
+  {
+    id: 3,
+    name: 'department',
+    title: 'Лига Банк',
+    subTitle: 'Всегда рядом',
+    buttonText: 'Найти отделение',
+    isDark: false,
+    link: 'map'
+  }
 ];
 
 export const MediaPoint = {

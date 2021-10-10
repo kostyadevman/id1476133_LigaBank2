@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import classNames from "classnames";
+import { HashLink } from 'react-router-hash-link';
 import {MediaPoint} from "../../const";
 
   const _getSlideClassName = (name, isDark) => {
@@ -34,7 +35,12 @@ const Slide = ({data}) => {
           <p className="slide__title">{data.title}</p>
           <p className="slide__subtitle">{data.subTitle}</p>
           {data.buttonText && (
-            <button className={_getButtonClassName(data.isDark)}>{data.buttonText}</button>
+            <HashLink
+              className={_getButtonClassName(data.isDark)}
+              to={`/#${data.link}`}
+            >
+              {data.buttonText}
+            </HashLink>
           )}
         </div>
         <picture>
@@ -62,6 +68,8 @@ const Slide = ({data}) => {
           />
           <img
             className="slide__img"
+            width="100"
+            height="100"
             src={`${process.env.PUBLIC_URL}/images/slides/slide${data.id}_phone.jpg`}
             srcSet={`${process.env.PUBLIC_URL}/images/slides/slide${data.id}_phone@2x.jpg 2x`}
             alt={`slide ${data.id}`}

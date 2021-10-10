@@ -1,11 +1,11 @@
 import React from "react";
 import {useSelector} from "react-redux";
-import {SelectOption} from "../../const";
 import Cost from "./cost";
 import Payment from "./payment";
 import Period from "./period";
 import InputCheckbox from "./input-checkbox";
 import {setIsCasco, setIsInsurance, setIsMomCapital} from "../../store/action";
+import {SelectOption} from "../../const";
 
 const StepSecond = () => {
 

@@ -2,10 +2,11 @@ import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import numeralize from "numeralize-ru";
 import Slider, {SliderTooltip} from "rc-slider";
-import "rc-slider/assets/index.css";
-import {Mortgage} from "../../const";
-import {setPayment} from "../../store/action";
 import {setValueInRange} from "../../utils";
+import "rc-slider/assets/index.css";
+import {setPayment} from "../../store/action";
+import {Mortgage} from "../../const";
+
 
 
 const { Handle } = Slider;

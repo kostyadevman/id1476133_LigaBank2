@@ -6,6 +6,7 @@ import Logo from '../../logo/logo';
 const Footer = () => {
   return (
     <footer className="footer">
+      <h2 className="footer__title visually-hidden">Подвал</h2>
       <div className="container">
         <div className="footer__wrapper">
           <Logo logoType={LogoType.footer}/>
@@ -16,6 +17,7 @@ const Footer = () => {
           </address>
           <Menu menuType={MenuType.footer}/>
           <section className="footer__sms sms">
+            <h3 className="sms__title visually-hidden">Напишите смс</h3>
             <svg className="sms__img" width="10" height="16" viewBox="0 0 10 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -26,6 +28,7 @@ const Footer = () => {
             <p className="sms__notion">Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</p>
           </section>
           <section className="footer__phone phone">
+            <h3 className="phone__title visually-hidden">Позвоните нам</h3>
             <svg className="phone__img" width="16" height="16" viewBox="0 0 16 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -36,6 +39,7 @@ const Footer = () => {
             <p className="phone__notion">Бесплатный для всех городов России</p>
           </section>
           <section className="footer__social social">
+            <h3 className="social__title visually-hidden">Ищите нас в социальных сетях</h3>
             <ul className="social__list">
               <li className="social__item">
                 <a className="social__link" target="_blank" rel="noreferrer" href="https://www.facebook.com/">

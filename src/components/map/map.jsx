@@ -2,7 +2,7 @@ import React from "react";
 
 const Map = () => {
   return (
-    <section className="map container map__container" id="map">
+    <section className="map container map--container" id="map">
       <h2 className="map__title">Отделения Лига Банка</h2>
       <iframe
         title="map"

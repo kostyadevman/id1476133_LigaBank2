@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import numeralize from "numeralize-ru";
-import Slider from "rc-slider";
-import {Mortgage} from "../../const";
-import {setPeriod} from "../../store/action";
 import {setValueInRange} from "../../utils";
+import Slider from "rc-slider";
+import {setPeriod} from "../../store/action";
+import {Mortgage} from "../../const";
+
 
 
 

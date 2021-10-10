@@ -1,9 +1,9 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getOffer, getSumHome} from "../../utils";
-import {Mortgage, SelectOption} from "../../const";
 import numeralize from "numeralize-ru";
+import {getOffer, getSumHome} from "../../utils";
 import {setIsRequestOpen} from "../../store/action";
+import {Mortgage, SelectOption} from "../../const";
 
 const Offer = () => {
 

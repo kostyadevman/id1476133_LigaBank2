@@ -4,8 +4,8 @@ import InputMask from 'react-input-mask';
 import numeralize from "numeralize-ru";
 import classNames from "classnames";
 import {padToFour} from "../../utils";
-import {Mortgage, PHONE_STRING_LENGTH, SelectOption} from "../../const";
 import {setIsRequestOpen, setRequestNumber, setSelectedOption, setThankYouOpen} from "../../store/action";
+import {Mortgage, PHONE_STRING_LENGTH, SelectOption} from "../../const";
 
 const StepThree = () => {
 

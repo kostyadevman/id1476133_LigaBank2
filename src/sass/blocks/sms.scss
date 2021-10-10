@@ -6,18 +6,21 @@
   grid-template-columns: 10px 1fr;
   grid-auto-rows: min-content;
   grid-column-gap: 27px;
-  max-width: 205px;
+  max-width: 210px;
 }
 
 .sms__img {
   grid-area: icon;
-  width: 26px;
-  height: 19px;
+  width: 20px;
+  height: 16px;
 }
 
 .sms__code {
   grid-area: code;
   margin: 0;
+  font-family: $base-medium-f;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .sms__notion {

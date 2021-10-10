@@ -1,0 +1,69 @@
+.cost {
+  position: relative;
+}
+
+.cost--error .cost__input {
+  border: 1px solid red;
+  color: transparent;
+  background: transparent;
+}
+
+.cost--error:before {
+  content: 'Некорректное значение';
+  position: absolute;
+  z-index: -1;
+  color: red;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+  @media (min-width: $desktop-width-min) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@mixin sign {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 33px;
+  width: 60px;
+  height: 60px;
+  border: 4px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.cost__plus {
+  @include sign;
+  right: 0;
+}
+
+.cost__plus:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-image: url("../../img/plus.svg");
+}
+
+.cost__minus {
+  @include sign;
+  left: 0;
+}
+
+.cost__minus:before {
+  content: '';
+  width: 16px;
+  height: 2px;
+  background-image: url("../../img/minus.svg");
+}
+
+.cost__hint {
+  display: block;
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: $special-grey;
+}

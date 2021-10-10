@@ -1,36 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import {AppRoute} from '../../const';
+import {MenuType} from '../../const';
 import {MENU_SETTINGS} from '../../utils';
 import classNames from "classnames";
 import {useSelector} from "react-redux";
 
 
 const Menu = ({menuType}) => {
-  const isMenuOpen = useSelector((state) => state.menuOpen);
+  const isMenuOpen = useSelector((state) => state.isMenuOpen);
 
   const _getMenuClassName = (isMenuOpen) => {
     return classNames(
       'menu__list',
-      {'menu__list--close': !isMenuOpen}
+      `${MENU_SETTINGS[menuType].listClassName}`,
+      {'menu__list--close': !isMenuOpen && menuType === MenuType.header}
     )
   }
   return (
     <nav className={MENU_SETTINGS[menuType].className}>
       <ul className={_getMenuClassName(isMenuOpen)}>
-        <li className="menu__item">
-          <Link to={AppRoute.SERVICES} className={MENU_SETTINGS[menuType].linkClassName}>Услуги</Link>
-        </li>
-        <li className="menu__item">
-          <Link to={AppRoute.CREDIT} className={MENU_SETTINGS[menuType].linkClassName}>Рассчитать кредит</Link>
-        </li>
-        <li className="menu__item">
-          <Link to={AppRoute.ROOT} className={MENU_SETTINGS[menuType].linkClassName}>Конвертер валют</Link>
-        </li>
-        <li className="menu__item">
-          <Link to={AppRoute.CONTACTS} className={MENU_SETTINGS[menuType].linkClassName}>Контакты</Link>
-        </li>
+        {MENU_SETTINGS[menuType].items.map((item) => (
+          <li className="menu__item" key={item.text}>
+            <Link to={item.link} className={MENU_SETTINGS[menuType].linkClassName}>{item.text}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
@@ -39,4 +33,5 @@ const Menu = ({menuType}) => {
 Menu.propTypes = {
   menuType: PropTypes.string.isRequired,
 };
+
 export default Menu;

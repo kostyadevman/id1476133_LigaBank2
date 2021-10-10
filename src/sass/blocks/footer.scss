@@ -1,24 +1,125 @@
 .footer {
   background-color: $base-blue;
-  padding: 45px 0 60px 0;
+  padding: 32px 0 49px 0;
+
+  @media (min-width: $tablet-width-min) {
+    height: 350px;
+    margin-top: 75px;
+    padding: 51px 0 55px 0;
+  }
+  @media (min-width: $desktop-width-min) {
+    height: auto;
+    margin-top: 110px;
+    padding: 55px 0 41px 0;
+  }
 }
 
 .footer__wrapper {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width-min) {
+    display: grid;
+    grid-template-areas:
+      "logo sms"
+      "menu phone"
+      "addr social";
+
+  }
+
+  @media (min-width: $desktop-width-min) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
 }
 
+.footer__logo {
+  display: block;
+  margin: 0 0 23px 0;
+
+  @media (min-width: $tablet-width-min) {
+    margin: 0;
+  }
+  @media (min-width: $desktop-width-min) {
+    position: absolute;
+    top: -10px;
+  }
+
+}
+
+.footer__menu {
+  grid-area: menu;
+  margin: 0 0 5px 0;
+
+  @media (min-width: $tablet-width-min) {
+    margin: -9px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    margin: 0;
+  }
+}
+
+
 .footer__address {
+  display: none;
+  grid-area: addr;
   max-width: 255px;
-  margin: 8px 0 0 0;
+  font-family: $base-f;
   font-size: 12px;
   line-height: 17px;
   color: $special-grey;
+
+  @media (min-width: $tablet-width-min) {
+    display: block;
+    margin: 12px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    margin: 33px 18px 0 0;
+  }
 }
 
-.footer__menu,
-.footer__sms,
-.footer__phone,
+.footer__sms {
+  grid-area: sms;
+  flex-shrink: 0;
+  margin: 0 0 15px -5px;
+
+  @media (min-width: $tablet-width-min) {
+    margin: 6px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    margin: 0 0 0 0;
+  }
+}
+
+.footer__phone {
+  grid-area: phone;
+  flex-shrink: 0;
+  margin: 0 0 17px -5px;
+
+  @media (min-width: $tablet-width-min) {
+    margin: 25px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    margin: 0 0 0 0;
+  }
+}
+
 .footer__social {
-  margin: 10px 0 0 0;
+  grid-area: social;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width-min) {
+    margin: -14px 0 0 -25px
+  }
+
+  @media (min-width: $desktop-width-min) {
+    margin: 0;
+  }
 }

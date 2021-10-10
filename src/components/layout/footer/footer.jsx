@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from '../../menu/menu';
-import {MenuType} from '../../../const';
+import {LogoType, MenuType} from '../../../const';
 import Logo from '../../logo/logo';
 
 const Footer = () => {
@@ -8,14 +8,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer__wrapper">
-          <div className="footer__logo-wrapper">
-            <Logo />
-            <address className="footer__address">
-              150015, г. Москва, ул. Московская, д. 32
-              Генеральная лицензия Банка России №1050
-              Ⓒ Лига Банк, 2019
-            </address>
-          </div>
+          <Logo logoType={LogoType.footer}/>
+          <address className="footer__address">
+            150015, г. Москва, ул. Московская, д. 32
+            Генеральная лицензия Банка России №1050
+            Ⓒ Лига Банк, 2019
+          </address>
           <Menu menuType={MenuType.footer}/>
           <section className="footer__sms sms">
             <svg className="sms__img" width="10" height="16" viewBox="0 0 10 16" fill="none"

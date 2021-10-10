@@ -1,0 +1,52 @@
+.payment {
+  margin: 0 0 34px 0;
+
+  @media (min-width: $desktop-width-min) {
+    margin: 0 0 42px 0;
+  }
+}
+
+.payment .rc-slider {
+  margin: 15px 0 0 0;
+}
+
+.payment .rc-slider-step {
+  height: 1px;
+  background-color: $special-grey-light;
+}
+
+.payment .rc-slider-track {
+  height: 1px;
+  background-color: $special-grey-light;
+}
+
+.payment .rc-slider-rail {
+  height: 1px;
+}
+
+.payment .rc-slider-handle {
+  margin-top: -7px;
+  background-color: $base-blue-dark;
+  border-color: $base-blue-dark;
+}
+
+.payment .rc-slider-handle:active {
+  cursor: pointer;
+  outline: none;
+}
+
+.rc-slider-tooltip-inner {
+  padding: 0 2px;
+  color: $special-grey;
+  background-color: $base-white;
+  box-shadow: none;
+  border: none;
+
+  font-family: $base-f;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.rc-slider-handle:focus{
+  outline: solid;
+}

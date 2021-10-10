@@ -1,7 +1,34 @@
 .step-three {
-  background-color: $base-black;
+  margin: 50px 0 0 0;
+
+  @media (min-width: $tablet-width-min) {
+    margin: 57px 0 0 0;
+  }
+
   @media (min-width: $desktop-width-min) {
     max-width: 770px;
+    margin: 62px auto 0 auto;
+    padding: 64px 70px 70px 70px;
+    background-color: $base-blue;
+  }
+}
 
+.step-three__title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: $base-medium-f;
+  font-size: 16px;
+  line-height: 22px;
+
+
+  @media (min-width: $tablet-width-min) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    font-size: 22px;
+    line-height: 31px;
   }
 }

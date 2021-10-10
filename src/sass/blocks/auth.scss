@@ -1,0 +1,140 @@
+.auth {
+  width: 290px;
+  border: 4px solid $base-blue-dark;
+  background-color: $base-blue;
+
+  @media (min-width: $tablet-width-min) {
+    width: 678px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    width: 544px;
+  }
+}
+
+.auth__wrapper {
+  position: relative;
+  padding: 47px 20px 60px 20px;
+
+  @media (min-width: $tablet-width-min) {
+    padding: 55px 88px 60px 88px
+  }
+
+  @media (min-width: $desktop-width-min) {
+    padding: 55px 59px 60px 57px
+  }
+}
+
+.auth__close {
+  position: absolute;
+  top: 44px;
+  right: 16px;
+  width: 16px;
+  height: 20px;
+  border: none;
+  background: transparent url("../../img/menu-close.svg") no-repeat;
+
+  @media (min-width: $tablet-width-min) {
+    top: 52px;
+    right: 77px;
+    width: 20px;
+    height: 20px;
+  }
+  @media (min-width: $desktop-width-min) {
+    right: 52px;
+  }
+}
+
+.auth__logo {
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 0 0 26px -10px;
+  background: url("../../img/logo-auth.svg") no-repeat;
+
+  @media (min-width: $tablet-width-min) {
+    margin: 0 0 30px 0;
+  }
+}
+
+.auth__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth__vision {
+  position: absolute;
+  top: 158px;
+  right: 11px;
+  width: 22px;
+  height: 12px;
+  border: none;
+  background: transparent;
+  background-image: url("../../img/vision.svg");
+
+  @media (min-width: $tablet-width-min) {
+    right: 30px;
+    width: 22px;
+  }
+}
+
+.auth__restore {
+  position: absolute;
+  right: 68px;
+  bottom: -24px;
+  font-family: $base-f;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width-min) {
+    right: 0;
+    bottom: 76px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+
+.auth__label {
+  display: block;
+  margin: 0 0 7px 0;
+  font-family: $base-f;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $special-blue-oxford;
+}
+
+.auth__input {
+  width: 100%;
+  padding: 18px 62px 16px 14px;
+  border: 1px solid $base-black;
+  border-radius: 4px;
+  text-align: start;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $tablet-width-min) {
+    padding: 18px 62px 16px 23px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @media (min-width: $desktop-width-min) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+.auth__input {
+  margin: 0 0 20px 0;
+}
+
+
+.auth__submit {
+  width: 100%;
+  margin: 13px 0 9px 0;
+
+  @media (min-width: $tablet-width-min) {
+    margin: 26px 0 0 0;
+  }
+}

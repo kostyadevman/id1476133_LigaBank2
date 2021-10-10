@@ -1,0 +1,76 @@
+.period {
+  position: relative;
+
+  @media (min-width: $tablet-width-min) {
+    margin: 39px 0 0 0;
+  }
+}
+
+@mixin period__legend {
+  padding: 0 2px;
+  color: $special-grey;
+  background-color: $base-white;
+  box-shadow: none;
+  border: none;
+
+  font-family: $base-f;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.period__min {
+  position: absolute;
+  left: 0;
+  @include period__legend;
+}
+
+.period__max {
+  position: absolute;
+  right: 0;
+  @include period__legend;
+}
+
+.period .rc-slider {
+  margin: 15px 0 0 0;
+}
+
+.period .rc-slider-step {
+  height: 1px;
+  background-color: $special-grey-light;
+}
+
+.period .rc-slider-track {
+  height: 1px;
+  background-color: $special-grey-light;
+}
+
+.period .rc-slider-rail {
+  height: 1px;
+}
+
+.period .rc-slider-handle {
+  margin-top: -7px;
+  background-color: $base-blue-dark;
+  border-color: $base-blue-dark;
+}
+
+.period .rc-slider-handle:active {
+  cursor: pointer;
+  outline: none;
+}
+
+.rc-slider-tooltip-inner {
+  padding: 0 2px;
+  color: $special-grey;
+  background-color: $base-white;
+  box-shadow: none;
+  border: none;
+
+  font-family: $base-f;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.rc-slider-handle:focus{
+  outline: solid;
+}

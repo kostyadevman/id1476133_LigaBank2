@@ -1,24 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app/app';
-import './sass/style.scss';
 import {Router as BrowserRouter} from "react-router-dom";
-import browserHistory from "./browser-history";
+import {configureStore} from "@reduxjs/toolkit";
 import {Provider} from "react-redux";
-import thunk from 'redux-thunk';
-import {composeWithDevTools} from 'redux-devtools-extension';
-import {applyMiddleware, createStore} from "redux";
-import {reducer} from "./store/reducer";
-import {createAPI} from "./services/api";
+import App from './components/app/app';
+import browserHistory from "./browser-history";
+import rootReducer from "./store/reducer";
+import './sass/style.scss';
 
-const api = createAPI();
-
-const store = createStore(
-  reducer,
-  composeWithDevTools(
-      applyMiddleware(thunk.withExtraArgument(api))
-  )
-);
+const store = configureStore({
+  reducer: rootReducer
+})
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,5 +1,3 @@
-export const API_KEY=`e7ab5b4cf26346d8f5ea`
-
 export const AppRoute = {
   ROOT: `/`,
   SERVICES: `/services`,

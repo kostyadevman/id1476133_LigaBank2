@@ -3,11 +3,10 @@ import Media from "react-media";
 import classNames from "classnames";
 import {Tabs, TabList, TabPanel, Tab} from "react-tabs";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {mediaQueries} from "../../media";
+import {mediaQuerie} from "../../media";
 import 'react-tabs/style/react-tabs.css';
 import Service from "./service";
 import {getId} from "../../utils";
-import {SLIDER_DELAY} from "../../const";
 
 
 export const data = [
@@ -59,7 +58,7 @@ const Services = () => {
   return (
     <section className="services container container--services">
       <h2 className="services__title visually-hidden">Предложения банка</h2>
-        <Media queries={mediaQueries}>
+        <Media queries={mediaQuerie}>
           {matches =>
             matches.DESKTOP
 
@@ -87,7 +86,6 @@ const Services = () => {
                 </Tabs>
               : <Swiper
                   centeredSlides
-                  autoplay={{ delay: SLIDER_DELAY, disableOnInteraction: false }}
                   pagination={{clickable: true}}
                   preloadImages={false}
                   loop={true}

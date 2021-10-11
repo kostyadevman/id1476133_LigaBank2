@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Slide from "../slide/slide";
-import {MediaPoint} from "../../const";
+import {AppRoute, MediaPoint} from "../../const";
 import { HashLink } from 'react-router-hash-link';
 
 
@@ -16,12 +16,20 @@ const Service = ({service}) => {
           ))}
         </ul>
         {service.isButton &&
-          <button className="button button--primary service__button">Узнать подробнее</button>
+          <HashLink
+            className="button button--primary service__button"
+            to={AppRoute.PAGE_NOT_FOUND}
+          >
+            Узнать подробнее
+          </HashLink>
         }
         {service.text && <p className="service__text">
           {service.text}
           {service.link &&
-            <HashLink className="service__link" to={`/#${service.link}`}>
+            <HashLink
+              className="service__link"
+              to={`/#${service.link}`}
+            >
               <b>{service.linkText}</b>
             </HashLink>}
         </p>}

@@ -6,9 +6,9 @@ import Main from '../main/main';
 import PageNotFound from '../page-not-found/page-not-found';
 import Footer from "../layout/footer/footer";
 import {AppRoute} from '../../const';
-import robotoRegular from "../../fonts/Roboto-Regular.woff2";
-import robotoMedium from "../../fonts/Roboto-Medium.woff2";
-import robotoBold from "../../fonts/Roboto-Bold.woff2";
+import robotoRegular from "../../fonts/roboto-regular.woff2";
+import robotoMedium from "../../fonts/roboto-medium.woff2";
+import robotoBold from "../../fonts/roboto-bold.woff2";
 const App = () => {
   return (
     <React.Fragment>
